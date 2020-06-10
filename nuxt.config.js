@@ -68,6 +68,7 @@ module.exports = {
 
   // 配置路由中间件
   // https://blog.csdn.net/weixin_40547403/article/details/85332755
+  // nuxt部署的路径问题 ： https://blog.csdn.net/daoke_li/article/details/102728801
   router: {
     middleware: [
       'i18n',
