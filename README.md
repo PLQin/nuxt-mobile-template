@@ -1,7 +1,9 @@
 
-# nuxt-ssr-template
+# nuxt ssr template in mobile
 
 > 一个空的 nuxt-ssr 服务端渲染模板，集成了iview、less、scss、stylus等常用组件，集成i18n国际化插件，简单封装了axios，开箱即用！
+
+更加的适合移动端开发
 
 ## \# 目录结构
 
