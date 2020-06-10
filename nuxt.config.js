@@ -28,8 +28,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     script: [
-      { src: 'https://at.alicdn.com/t/font_1276549_01dmqdh22x5j.js' },
-      { src: '/js/rem.js' }
+      { src: './js/rem.js' } // 使用相对路径是为了适配以相对路径打开的静态站点， 不如此的话则无法在以相对路径打开的静态站点中使用
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -62,20 +61,22 @@ module.exports = {
   generate: {
     subFolders: false,
     routes: [
-      '/',
       '/help',
       '/help/detail'
     ]
   },
 
   // 配置路由中间件
+  // https://blog.csdn.net/weixin_40547403/article/details/85332755
   router: {
     middleware: [
       'i18n',
       'permission'
     ],
+    mode: 'hash', // 使用 'hash' 主要是为了适配以相对路径打开的静态站点， 必须使用 'hash' 否则路由跳转不生效
     // base:"/en/"
-    base: '/'
+    // base: '/'
+    base: process.env.NODE_ENV === 'production' ? './' : '/' // 使用 './' 主要是为了适配以相对路径打开的静态站点
   },
 
   /*

@@ -25,7 +25,11 @@
               <span>HuoPay有什么优势？</span>
             </div>
             <div class="col-1 icon">
-              <img src="/img/arrow-gray@2x.png" alt>
+              <!--
+                不考虑以相对路径打开的静态站点的情况下， 也可以：
+                <img src="/img/arrow-gray@2x.png" alt>
+              -->
+              <img src="~/static/img/arrow-gray@2x.png" alt>
             </div>
           </div>
         </div>
@@ -39,21 +43,39 @@
 </template>
 
 <script>
+
 export default {
   components: {},
   data() {
     return {
       selfService: [
-        { img: '/img/getting-started@3x.png', id: 1, txt: '新手入门' },
-        { img: '/img/phone@3x.png', id: 1, txt: '更换手机' },
-        { img: '/img/expense-calendar@3x.png', id: 1, txt: '消费记录' },
-        { img: '/img/real-name@3x.png', id: 1, txt: '实名认证' }
+        // 不考虑以相对路径打开的静态站点的情况下， 也可以：
+        // { img: '/img/getting-started@3x.png', id: 1, txt: '新手入门' },
+
+        { img: require('~/static/img/getting-started@3x.png'), id: 1, txt: '新手入门' },
+        { img: require('~/static/img/phone@3x.png'), id: 1, txt: '更换手机' },
+        { img: require('~/static/img/expense-calendar@3x.png'), id: 1, txt: '消费记录' },
+        { img: require('~/static/img/real-name@3x.png'), id: 1, txt: '实名认证' }
       ],
       issueList: [
-        { id: 1, txt: 'HuoPay有什么优势？' },
-        { id: 1, txt: '支持哪些币种？' },
-        { id: 1, txt: '如何退出Huopay？' },
-        { id: 1, txt: '为什么我转帐一直到不了？' }
+        { id: 1, txt: '如何注册？' },
+        { id: 1, txt: '如何设置账号昵称？' },
+        { id: 1, txt: '忘记密码怎么办？' },
+        { id: 1, txt: '登录/交易密码如何找回或修改？' },
+        { id: 1, txt: '如何变更账户绑定的手机？' },
+        { id: 1, txt: '如何变更账户绑定的邮箱？' },
+        { id: 1, txt: '如何进行KYC？' },
+        { id: 1, txt: '如何保护您的账户安全？' },
+        { id: 1, txt: '如何充值？' },
+        { id: 1, txt: '如何提现？' },
+        { id: 1, txt: '如何兑换？' },
+        { id: 1, txt: '如何转账？' },
+        { id: 1, txt: '如何买入/卖出？' },
+        { id: 1, txt: '如何充币？' },
+        { id: 1, txt: '如何提币？' },
+        { id: 1, txt: '如何添加联系人？' },
+        { id: 1, txt: '我的个人信息和身份会受到保护吗？' },
+        { id: 1, txt: '如何绑定卡片或帐户？' }
       ]
     }
   },
@@ -63,7 +85,7 @@ export default {
   methods: {
     goDetail() {
       this.$router.push({
-        path: 'help/detail'
+        path: '/help/detail'
       })
     }
   },

@@ -41,4 +41,12 @@ More information about the usage of this directory in [the documentation](https:
 </template>
 ```
 
+还可以
+
+```javascript
+selfService: [
+  { img: require('~/static/img/getting-started@3x.png'), id: 1, txt: '新手入门' },
+],
+```
+
 
