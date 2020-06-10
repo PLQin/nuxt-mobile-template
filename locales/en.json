@@ -1,0 +1,29 @@
+{
+  "webName":"NUXT SERVER RENDERING - SSR",
+  "global":{
+    "login":"Sign in",
+    "register":"Sign up",
+    "logout":"Logout",
+    "join":"Join",
+    "confirm":"Confirm",
+    "submit":"Submit",
+    "reset":"Reset",
+    "all":"All",
+    "open":"Open",
+    "close":"Close",
+    "userList": "User List"
+  },
+
+  "headerNav": {
+    "home": "HOME",
+    "users":"USERS"
+  },
+  "login": {
+    "username": "UserName",
+    "password": "Password"
+  },
+  "footer": {
+    "TermsOfUse": "Terms of Use",
+    "PrivacyPolicy": "Privacy Protection"
+  }
+}

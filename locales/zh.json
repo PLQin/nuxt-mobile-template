@@ -1,0 +1,29 @@
+{
+  "webName":"NUXT服务端渲染 - SSR",
+  "global":{
+    "login":"登录",
+    "register":"注册",
+    "logout":"注销",
+    "join":"加入",
+    "confirm":"确认",
+    "submit":"提交",
+    "reset":"重置",
+    "all":"全部",
+    "open":"打开",
+    "close":"关闭",
+    "userList": "用户列表"
+  },
+
+  "headerNav": {
+    "home": "首页",
+    "users":"用户"
+  },
+  "login": {
+    "username": "用户名",
+    "password": "密码"
+  },
+  "footer": {
+    "TermsOfUse": "使用条款",
+    "PrivacyPolicy": "隐私保护"
+  }
+}
