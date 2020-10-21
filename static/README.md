@@ -1,17 +1,15 @@
-# STATIC
 
-**This directory is not required, you can delete it if you don't want to use it.**
+这个目录包含静态文件。
+这个目录中的每个文件都映射到' / '。
 
-This directory contains your static files.
-Each file inside this directory is mapped to `/`.
-Thus you'd want to delete this README.md before deploying to production.
+例如: `/static/robots.txt` 被映射为 `/robots.txt`.
 
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/guide/assets#static).
+更多关于这个目录使用的信息在 [这个文档](https://nuxtjs.org/guide/assets#static).
 
 
 ## \# 加载静态资源
+
+见 [资源文件 - NuxtJS](https://zh.nuxtjs.org/guide/assets/)
 
 对于不需要通过 Webpack 处理的静态资源文件，可以放置在 static 目录中。  
 默认情况下，所有的资源URL例如 `<img src="...">`、 `background: url(...)` 和 CSS中的 `@import` 均会被解析成模块通过 require 引用。  
@@ -23,30 +21,26 @@ More information about the usage of this directory in [the documentation](https:
 如果我们在 `pages/index.vue` 中使用以下代码引用图片资源：
 ```vue
 <template>
-  <img src="~/assets/image.png">
-</template>
-```
+  <img src="~/assets/img/logo.png" />
+  <img src="~/static/img/logo.png" />
 
-或者
-```vue
-<template>
-  <img src="~/static/image.png">
-</template>
-```
-
-又或者 （此文件需要在目录`static`下）
-```vue 
-<template>
-  <img src="/image.png">
+  <!-- 引用 static 目录下的图片(不考虑以相对路径打开的静态站点的情况下) -->
+  <img src="/img/logo.png" />
 </template>
 ```
 
 还可以
 
 ```javascript
-selfService: [
-  { img: require('~/static/img/getting-started@3x.png'), id: 1, txt: '新手入门' },
+list: [
+  { img: require('~/static/img/getting-started@3x.png'), id: 1 },
 ],
 ```
 
-
+```css
+background: url("~assets/img/logo.png");
+background-image: url("~static/img/security-center-bg@2x.png");
+width: 20px;
+height: 20px;
+background-size: cover;
+```
