@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "nuxt + axios + vuex + i18n，mobile project example for nuxt ，一个基于 nuxt 的 ssr template。",
   "author": "2874539950@qq.com",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "nuxt",
