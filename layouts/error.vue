@@ -33,7 +33,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .error {
   width: 100%;
   max-width: 1440px;
@@ -42,6 +42,7 @@ export default {
 }
 h1 {
   font-size: 72px;
+  margin-top: 100px;
 }
 h3 {
   margin: 20px 0 20px 0;

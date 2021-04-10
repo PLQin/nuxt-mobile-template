@@ -2,19 +2,7 @@ import qs from 'qs'
 import axios from 'axios'
 
 // eslint-disable-next-line no-unused-vars
-let baseURI = ''
-// console.log(process.env.NODE_ENV)
-if (process.env.NODE_ENV === 'development') {
-  // 开发环境
-  baseURI = 'http://localhost:3000'
-} else if (process.env.NODE_ENV === 'staging') {
-  // 生产环境
-  baseURI = 'https://staging.douyu.com'
-} else {
-  // 生产环境
-  baseURI = 'https://www.douyu.com'
-}
-
+const baseURI = process.env.BASE_API || 'http://localhost:3000'
 const service = axios.create({
   // 自定义的请求头
   headers: {

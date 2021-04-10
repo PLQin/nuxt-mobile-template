@@ -1,27 +1,4 @@
-<template>
-  <div>
-    <!--  -->
-  </div>
-</template>
-
 <script>
-export default {
-  data() {
-    return {}
-  },
-  computed: {},
-  watch: {},
-  created() {
-    this.$router.push({
-      path: '/help'
-    })
-  },
-  methods: {},
-  head() {
-    return {}
-  }
-}
+import Index from '~/pages/_lang/index'
+export default Index
 </script>
-
-<style lang="scss" scoped>
-</style>

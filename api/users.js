@@ -1,4 +1,4 @@
-import request from '~/plugins/request'
+import request from '~/utils/request'
 
 /**
  * 获取用户列表
@@ -6,7 +6,7 @@ import request from '~/plugins/request'
  */
 export const fetchUsersList = (params) => {
   return request.get(`/japi/search/api/getHotList`, {
-    params: params
+    params
   })
 }
 

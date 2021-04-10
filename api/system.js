@@ -1,4 +1,4 @@
-import request from '~/plugins/request'
+import request from '~/utils/request'
 
 export const fetchMemberInfo = (query) => {
   return request.get(`/api/fetchMemberInfo`, query)
